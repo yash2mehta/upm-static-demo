@@ -1,0 +1,5 @@
+[build]
+  # The site is already built: publish the repository root as-is.
+  publish = "."
+  # The login gate lives here (see netlify/edge-functions/auth.ts).
+  edge_functions = "netlify/edge-functions"
