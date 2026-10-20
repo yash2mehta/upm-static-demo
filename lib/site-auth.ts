@@ -99,10 +99,6 @@ function googleStart(url: URL) {
     state,
     prompt: "select_account",
   });
-  // "hd" makes Google's account picker show only accounts from this domain.
-  // It is a UI hint only; the callback re-checks the domain on the token.
-  const domain = env("GOOGLE_ALLOWED_DOMAIN");
-  if (domain) params.set("hd", domain);
 
   const headers = noStore();
   headers.set("Location", `https://accounts.google.com/o/oauth2/v2/auth?${params}`);
